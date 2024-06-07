@@ -57,7 +57,7 @@ API ve kütüphaneler:
 - TensorFlow ve Keras: Modellerin oluşturulması, eğitilmesi ve tahmin işlemleri için
 
 
-### Projeyi GitHub'dan İndirme ve Kurulum ----
+### Projeyi GitHub'dan İndirmesi ve Kurulumu ----
 
 1. **GitHub'dan Projeyi Klonlama:**
    - Terminali açın.
@@ -97,12 +97,19 @@ API ve kütüphaneler:
      pip install Pillow
      
 
-5. **Model Dosyalarının Yerleştirilmesi:**
+5. **Veri Seti Dosyalarının Yerleştirilmesi:**
+   - voice_model.py dosyası için RAVDESS (https://www.kaggle.com/datasets/uwrfkaggler/ravdess-emotional-speech-audio) veri setini indirin ve projenin dosya dizimindeki "/data" klasörünün altına yerleştirin.
+   - cam_model.py dosyası için FER-2013 (https://www.kaggle.com/datasets/msambare/fer2013) veri setini indirin ve projenin dosya dizimindeki "/data" klasörünün altına yerleştirin.
+
+
+6. **Model Dosyalarının Yerleştirilmesi:**
    - `cam_model.h5` ve `best_complex_model1.keras` dosyalarının `models` klasörüne yerleştirildiğinden emin olun. Eğer bu klasör yoksa, oluşturun ve dosyaları bu klasöre kopyalayın.
 
-6. **Projeyi Çalıştırma:**
+7. **Projeyi Çalıştırma:**
    - Projeyi çalıştırmak için aşağıdaki komutu kullanın:
-     ```bash
-     python main.py
-     ```
+    
+     "python main.py"
+
+     not:Lütfen projede kullanılmış tüm dosya yollarını kendizine göre düzenleyin. main.py dosyasını çalıştırmak için model dosyalarının yollarının doğru verildiğinden emin olun.
+     
 
