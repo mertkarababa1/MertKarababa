@@ -1,98 +1,93 @@
-Emotion Detection Project
+Sayin Hocam projenin dosya boyutu cok yuksek oldugu icin yukleme yapamadim, size projemin Github linkini iletiyorum. (https://github.com/mertkarababa1/MertKarababa)
+Projenin nasil calistirilacagina dair detayli bilgi asagidadir.
 
-Bu proje, video ve ses dosyalarından duygu tanıma işlemi gerçekleştirmektedir. Proje, yüz ifadelerini ve ses özelliklerini kullanarak duygu durum tespiti yapar.
+1. Proje 
 
-1. Literatür ve Makale Araştırmaları
-------------------------------------
+Bu proje, video ve ses dosyalarindan duygu tanima islemi gerceklestirmektedir. Proje, yuz ifadelerini ve ses ozelliklerini kullanarak duygu durumu tespiti yapar.
+
+## 1. Literatur ve Makale Arastirmalari
 
 - "A Review on Emotion Detection Techniques Using Facial and Vocal Expressions" - Journal of Behavioral and Brain Science
 - "Speech Emotion Recognition with deep learning" - https://www.sciencedirect.com/science/article/pii/S1877050920318512
 
+## 2. DataSet, Veri Ozellikleri ve Ozellikleri
 
-2. DataSet, Veri Özellikleri ve Özellikleri
--------------------------------------------
-Projemizde ses duygu surumu tespiti için kullanılan veri seti, RAVDESS (Ryerson Audio-Visual Database of Emotional Speech and Song) veri setidir. Bu veri seti, çeşitli duygu ifadelerini içeren ses kayıtlarından oluşur.
-Yüz ifadeleri duygu durumu için ise FER-2013 llanılmıştır.
+Projemizde ses duygu surumu tespiti icin kullanilan veri seti, RAVDESS (Ryerson Audio-Visual Database of Emotional Speech and Song) veri setidir. Bu veri seti, cesitli duygu ifadelerini iceren ses kayitlarindan olusur. Yuz ifadeleri duygu durumu icin ise FER-2013 kullanilmistir.
 
-Veri setinin özellikleri:
+Veri setinin ozellikleri:
 
-- Ses dosyaları: .wav formatında, 48 kHz örnekleme frekansında duygu içeren konuşmalar.
+- Ses dosyalari: .wav formatinda, 48 kHz ornekleme frekansinda duygu iceren konusmalar.
 
+## 3. Veri On Isleme, Ozellik Muhendisligi
 
-3. Veri Ön İşleme, Özellik Mühendisliği
----------------------------------------
-Veri ön işleme adımları:
-- Ses dosyalarının yüklendi ve örnekleme frekansının yeniden ayarlandı.
-- MFCC (Mel-frequency cepstral coefficients) ve Mel Spectrogram özelliklerinin çıkarıldı.
-- Veri setindeki dosyaların etiketlenmesi ve kategorik forma dönüştürülmesi yapıldı.
+Veri on isleme adimlari:
+- Ses dosyalarinin yuklenmesi ve ornekleme frekansinin yeniden ayarlanmasi.
+- MFCC (Mel-frequency cepstral coefficients) ve Mel Spectrogram ozelliklerinin cikarilmasi.
+- Veri setindeki dosyalarin etiketlenmesi ve kategorik forma donusturulmesi.
 
-Özellik mühendisliği teknikleri:
-- Ses dosyalarında zenginleştirme teknikleri (pitch shifting ve time stretching)yapıldı.
-- Yüz ifadelerinin gri tonlamalı hale getirilmesi ve normalizasyonu yapıldı.
+Ozellik muhendisligi teknikleri:
+- Ses dosyalarinda zenginlestirme teknikleri (pitch shifting ve time stretching).
+- Yuz ifadelerinin gri tonlamali hale getirilmesi ve normalizasyonu.
 
+## 4. Modelleme, Test ve Dogrulama
 
-4. Modelleme, Test ve Doğrulama
--------------------------------
-Proje iki model içermektedir:
+Proje iki model icermektedir:
+1. Goruntu tabanli duygu tanima modeli: CNN (Convolutional Neural Network) kullanilarak olusturulmustur.
+2. Ses tabanli duygu tanima modeli: GRU (Gated Recurrent Unit) katmanlari iceren kompleks bir model kullanilarak olusturulmustur.
 
-1. Görüntü tabanlı duygu tanıma modeli: CNN (Convolutional Neural Network) kullanılarak oluşturulmuştur.
-2. Ses tabanlı duygu tanıma modeli: GRU (Gated Recurrent Unit) katmanları içeren kompleks bir model kullanılarak oluşturulmuştur.
+Model egitimi ve dogrulama adimlari:
+- Veri setinin egitim ve test setlerine bolunmesi.
+- Modellerin egitimi ve performanslarinin izlenmesi (ModelCheckpoint ve EarlyStopping kullanilarak).
+- Egitim sureci sonunda en iyi modellerin kaydedilmesi ve test setinde degerlendirilmesi.
 
-Model eğitimi ve doğrulama adımları:
-- Veri setinin eğitim ve test setlerine bölündü.
-- Modellerin eğitimi ve performanslarının izlendi (ModelCheckpoint ve EarlyStopping kullanılarak).
-- Eğitim süreci sonunda en iyi modeller kaydedildi ve test setinde değerlendirildi.
+## 5. Dagitim Icin: Kaynaklar, Ortam, API, Kitaplik ve Teknoloji Yiginlari
 
-
-5. Dağıtım İçin: Kaynaklar, Ortam, API, Kitaplık ve Teknoloji Yığınları
-----------------------------------------------------------------------
-Projenin dağıtımı için gerekli olan ortam ve bağımlılıklar:
+Projenin dagitimi icin gerekli olan ortam ve bagimliliklar:
 - Python 3.7+
-- OpenCV: Görüntü işleme için
-- NumPy: Sayısal işlemler için
-- Keras ve TensorFlow: Derin öğrenme modelleri için
-- Librosa: Ses işleme için
-- Pillow: Görüntü işleme için
-- Tkinter: GUI uygulaması için
+- OpenCV: Goruntu isleme icin
+- NumPy: Sayisal islemler icin
+- Keras ve TensorFlow: Derin ogrenme modelleri icin
+- Librosa: Ses isleme icin
+- Pillow: Goruntu isleme icin
+- Tkinter: GUI uygulamasi icin
 
-API ve kütüphaneler:
-- OpenCV: `cv2.CascadeClassifier` kullanarak yüz tespiti
-- Librosa: `librosa.load` ve `librosa.feature.mfcc` kullanarak ses özellikleri çıkarma
-- TensorFlow ve Keras: Modellerin oluşturulması, eğitilmesi ve tahmin işlemleri için
+API ve kutuphaneler:
+- OpenCV: `cv2.CascadeClassifier` kullanarak yuz tespiti
+- Librosa: `librosa.load` ve `librosa.feature.mfcc` kullanarak ses ozellikleri cikarma
+- TensorFlow ve Keras: Modellerin olusturulmasi, egitilmesi ve tahmin islemleri icin
 
-
-
-### Projeyi GitHub'dan İndirmesi ve Kurulumu ----
+### Projeyi GitHub'dan Indirmesi ve Kurulumu ----
 
 1. **GitHub'dan Projeyi Klonlama:**
-   - Terminali açın.
-   - Aşağıdaki komutu kullanarak projeyi klonlayın:
+   - Terminali acin.
+   - Asagidaki komutu kullanarak projeyi klonlayin:
      
      "git clone https://github.com/mertkarababa1/MertKarababa.git"
      
 
-2. **Proje Klasörüne Geçiş:**
-   - Terminalde, klonladığınız proje klasörüne geçiş yapın:
-
+2. **Proje Klasorune Gecis:**
+   - Terminalde, klonladiginiz proje klasorune gecis yapin:
+     
      "cd MertKarababa"
+    
 
-3. **Python Sanal Ortamı Oluşturma ve Etkinleştirme:**
-   - Sanal ortam oluşturmak için aşağıdaki komutu kullanın:
-     
+3. **Python Sanal Ortami Olusturma ve Etkinlestirme:**
+   - Sanal ortami olusturmak icin asagidaki komutu kullanin:
+    
      "python -m venv env"
-     
-   - Sanal ortamı etkinleştirin:
+    
+   - Sanal ortami etkinlestirin:
      - Windows:
-      
-       ".\env\Scripts\activate"
+       
+      ".\env\Scripts\activate"
        
      - MacOS/Linux:
-       
+      
        "source env/bin/activate"
        
 
-4. **Gerekli Kütüphaneleri Yükleme:**
-   - Sanal ortam etkinleştirildikten sonra, gerekli kütüphaneleri manuel olarak yükleyin. Aşağıdaki komutları terminale sırasıyla yazın:
+4. **Gerekli Kutuphaneleri Yukleme:**
+   - Sanal ortam etkinlestirildikten sonra, gerekli kutuphaneleri manuel olarak yukleyin. Asagidaki komutlari terminale sirayla yazin:
      
      pip install opencv-python
      pip install numpy
@@ -100,21 +95,21 @@ API ve kütüphaneler:
      pip install tensorflow
      pip install librosa
      pip install Pillow
-     
-
-5. **Veri Seti Dosyalarının Yerleştirilmesi:**
-   - voice_model.py dosyası için RAVDESS (https://www.kaggle.com/datasets/uwrfkaggler/ravdess-emotional-speech-audio) veri setini indirin ve projenin dosya dizimindeki "/data" klasörünün altına yerleştirin.
-   - cam_model.py dosyası için FER-2013 (https://www.kaggle.com/datasets/msambare/fer2013) veri setini indirin ve projenin dosya dizimindeki "/data" klasörünün altına yerleştirin.
-
-
-6. **Model Dosyalarının Yerleştirilmesi:**
-   - `cam_model.h5` ve `best_complex_model1.keras` dosyalarının `models` klasörüne yerleştirildiğinden emin olun. Eğer bu klasör yoksa, oluşturun ve dosyaları bu klasöre kopyalayın.
-
-7. **Projeyi Çalıştırma:**
-   - Projeyi çalıştırmak için aşağıdaki komutu kullanın:
     
+
+5. **Veri Seti Dosyalarinin Yerleştirilmesi:**
+   - `voice_model.py` dosyasi icin RAVDESS (https://www.kaggle.com/datasets/uwrfkaggler/ravdess-emotional-speech-audio) veri setini indirin ve projenin dosya dizimindeki `/data` klasorunun altina yerlestirin.
+
+   - `cam_model.py` dosyasi icin FER-2013 (https://www.kaggle.com/datasets/msambare/fer2013) veri setini indirin ve projenin dosya dizimindeki `/data` klasorunun altina yerlestirin.
+
+6. **Model Dosyalarinin Yerleştirilmesi:**
+   - `cam_model.h5` ve `best_complex_model1.keras` dosyalarinin `models` klasorune yerlestirildiginden emin olun. Eger bu klasor yoksa, olusturun ve dosyalari bu klasore kopyalayin.
+
+7. **Projeyi Calistirma:**
+
+   - Projeyi calistirmak icin asagidaki komutu kullanin ya da run edin:
+
      "python main.py"
+    
 
-     not:Lütfen projede kullanılmış tüm dosya yollarını kendizine göre düzenleyin. main.py dosyasını çalıştırmak için model dosyalarının yollarının doğru verildiğinden emin olun.
-     
-
+Not: Lutfen, projede kullanilmis tum dosya yollarini kendinize gore duzenleyin !.. `main.py` dosyasini calistirmak icin model dosyalarinin yollarinin dogru verildiginden emin olun.
