@@ -57,7 +57,7 @@ API ve kütüphaneler:
 - TensorFlow ve Keras: Modellerin oluşturulması, eğitilmesi ve tahmin işlemleri için
 
 
----- Projeyi GitHub'dan İndirme ve Kurulum ----
+### Projeyi GitHub'dan İndirme ve Kurulum ----
 
 1. **GitHub'dan Projeyi Klonlama:**
    - Terminali açın.
