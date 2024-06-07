@@ -1,12 +1,13 @@
 Emotion Detection Project
 
-Bu proje, video ve ses dosyalarından duygu tanıma işlemi gerçekleştirmektedir. Proje, yüz ifadelerini ve ses özelliklerini kullanarak duygu tespiti yapar.
+Bu proje, video ve ses dosyalarından duygu tanıma işlemi gerçekleştirmektedir. Proje, yüz ifadelerini ve ses özelliklerini kullanarak duygu durum tespiti yapar.
 
 1. Literatür ve Makale Araştırmaları
 ------------------------------------
 
 - "A Review on Emotion Detection Techniques Using Facial and Vocal Expressions" - Journal of Behavioral and Brain Science
 - "Speech Emotion Recognition with deep learning" - https://www.sciencedirect.com/science/article/pii/S1877050920318512
+
 
 2. DataSet, Veri Özellikleri ve Özellikleri
 -------------------------------------------
@@ -16,6 +17,7 @@ Yüz ifadeleri duygu durumu için ise FER-2013 llanılmıştır.
 Veri setinin özellikleri:
 
 - Ses dosyaları: .wav formatında, 48 kHz örnekleme frekansında duygu içeren konuşmalar.
+
 
 3. Veri Ön İşleme, Özellik Mühendisliği
 ---------------------------------------
@@ -28,6 +30,7 @@ Veri ön işleme adımları:
 - Ses dosyalarında zenginleştirme teknikleri (pitch shifting ve time stretching)yapıldı.
 - Yüz ifadelerinin gri tonlamalı hale getirilmesi ve normalizasyonu yapıldı.
 
+
 4. Modelleme, Test ve Doğrulama
 -------------------------------
 Proje iki model içermektedir:
@@ -39,6 +42,7 @@ Model eğitimi ve doğrulama adımları:
 - Veri setinin eğitim ve test setlerine bölündü.
 - Modellerin eğitimi ve performanslarının izlendi (ModelCheckpoint ve EarlyStopping kullanılarak).
 - Eğitim süreci sonunda en iyi modeller kaydedildi ve test setinde değerlendirildi.
+
 
 5. Dağıtım İçin: Kaynaklar, Ortam, API, Kitaplık ve Teknoloji Yığınları
 ----------------------------------------------------------------------
@@ -55,6 +59,7 @@ API ve kütüphaneler:
 - OpenCV: `cv2.CascadeClassifier` kullanarak yüz tespiti
 - Librosa: `librosa.load` ve `librosa.feature.mfcc` kullanarak ses özellikleri çıkarma
 - TensorFlow ve Keras: Modellerin oluşturulması, eğitilmesi ve tahmin işlemleri için
+
 
 
 ### Projeyi GitHub'dan İndirmesi ve Kurulumu ----
