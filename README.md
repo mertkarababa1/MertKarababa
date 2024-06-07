@@ -56,3 +56,53 @@ API ve kütüphaneler:
 - Librosa: `librosa.load` ve `librosa.feature.mfcc` kullanarak ses özellikleri çıkarma
 - TensorFlow ve Keras: Modellerin oluşturulması, eğitilmesi ve tahmin işlemleri için
 
+
+---- Projeyi GitHub'dan İndirme ve Kurulum ----
+
+1. **GitHub'dan Projeyi Klonlama:**
+   - Terminali açın.
+   - Aşağıdaki komutu kullanarak projeyi klonlayın:
+     
+     "git clone https://github.com/mertkarababa1/MertKarababa.git"
+     
+
+2. **Proje Klasörüne Geçiş:**
+   - Terminalde, klonladığınız proje klasörüne geçiş yapın:
+
+     "cd MertKarababa"
+
+3. **Python Sanal Ortamı Oluşturma ve Etkinleştirme:**
+   - Sanal ortam oluşturmak için aşağıdaki komutu kullanın:
+     
+     "python -m venv env"
+     
+   - Sanal ortamı etkinleştirin:
+     - Windows:
+      
+       ".\env\Scripts\activate"
+       
+     - MacOS/Linux:
+       
+       "source env/bin/activate"
+       
+
+4. **Gerekli Kütüphaneleri Yükleme:**
+   - Sanal ortam etkinleştirildikten sonra, gerekli kütüphaneleri manuel olarak yükleyin. Aşağıdaki komutları terminale sırasıyla yazın:
+     
+     pip install opencv-python
+     pip install numpy
+     pip install keras
+     pip install tensorflow
+     pip install librosa
+     pip install Pillow
+     
+
+5. **Model Dosyalarının Yerleştirilmesi:**
+   - `cam_model.h5` ve `best_complex_model1.keras` dosyalarının `models` klasörüne yerleştirildiğinden emin olun. Eğer bu klasör yoksa, oluşturun ve dosyaları bu klasöre kopyalayın.
+
+6. **Projeyi Çalıştırma:**
+   - Projeyi çalıştırmak için aşağıdaki komutu kullanın:
+     ```bash
+     python main.py
+     ```
+
