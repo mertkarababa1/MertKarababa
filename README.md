@@ -108,7 +108,7 @@ API ve kutuphaneler:
 7. **Projeyi Calistirma:**
 
    - Projeyi calistirmak icin asagidaki komutu kullanin ya da run edin:
-
+main.py dosyasi uzerinden proje calisacaktir.
      "python main.py"
     
 
